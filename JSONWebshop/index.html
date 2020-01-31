@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Webshop met JSON | Regilio Spee</title>
+    <meta name="author" content="Regilio Spee" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="bestelpagina.html"
+        ><div class="winkelwagen">
+          <span
+            id="winkelwagen__aantal"
+            class="winkelwagen__aantal"
+          ></span></div
+      ></a>
+      <h1>Auto's sorteren | Regilio Spee</h1>
+    </header>
+    <select id="kenmerk">
+      <option value="titelUpper" selected>merk</option>
+      <option value="sortModel">Model</option>
+      <option value="js"> Bouwjaar</option>
+      <option value="deuren">aantal bladzijden</option>
+      <option value="taal">taal</option>
+      <option value="prijs">prijs</option>
+    </select>
+    <label><input type="radio" name="oplopend" value="1" />oplopend</label>
+    <label><input type="radio" name="oplopend" value="-1" />aflopend</label>
+    <div id="uitvoer"></div>
+    <script src="sorteerBoeken.js"></script>
+  </body>
+</html>
