@@ -4,11 +4,10 @@
       "cover": "https://www.audi.nl/content/dam/nemo/models/r8/r8-spyder-v10-performance-quattro/my-2019/1920x1080-inline-media-gallery/1920x1080-AR8_D_181003.jpg?downsize=1920px:*",
       "model": ["R8 Spyder V10"],
       "bouwjaar": "mei 2019",
-      "modelnummer": "9789078211433",
-      "deuren": 104,
+      "modelnummer": "9789078211433", // verandert van ean naar modelnummer
+      "deuren": 104, // verandert van paginas naar deuren
       "taal": "Nederlands",
-      "deuren": 2,
-      "prijs": 299385.00,
+      "prijs": 299385.00, // verandert van price naar prijs
       "aantal": 1
    },
    {
