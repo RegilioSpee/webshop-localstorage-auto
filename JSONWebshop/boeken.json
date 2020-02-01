@@ -6,7 +6,7 @@
       "bouwjaar": "mei 2019",
       "modelnummer": "9789078211433", // verandert van ean naar modelnummer
       "deuren": 104, // verandert van paginas naar deuren
-      "taal": "Nederlands",
+      "taal": "Duits",
       "prijs": 299385.00, // verandert van price naar prijs
       "aantal": 1
    },
@@ -17,7 +17,7 @@
       "bouwjaar": "2019",
       "modelnummer": "9780655315254",
       "deuren": 4,
-      "taal": "Engels",
+      "taal": "Duits",
       "prijs": 201485.00,
       "aantal":  1
    }
