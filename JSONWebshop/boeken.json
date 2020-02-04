@@ -3,18 +3,18 @@
       "merk": "Audi",
       "cover": "https://www.audi.nl/content/dam/nemo/models/r8/r8-spyder-v10-performance-quattro/my-2019/1920x1080-inline-media-gallery/1920x1080-AR8_D_181003.jpg?downsize=1920px:*",
       "model": ["R8 Spyder V10"],
-      "bouwjaar": "mei 2019",
-      "modelnummer": "9789078211433", // verandert van ean naar modelnummer
-      "deuren": 104, // verandert van paginas naar deuren
+      "bouwjaar": "2019",
+      "modelnummer": "9789078211433", 
+      "deuren": 2, 
       "taal": "Duits",
-      "prijs": 299385.00, // verandert van price naar prijs
+      "prijs": 299385.00, 
       "aantal": 1
    },
    {
       "merk": "Mercedes Benz",
       "cover": "https://www.mercedes-benz.nl/passengercars/mercedes-benz-cars/models/s-class/cabriolet-a217/explore/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile/image.MQ6.8.2x.20190913085948.jpeg",
       "model": ["S-klasse Cabriolet"],
-      "bouwjaar": "2019",
+      "bouwjaar": "2020",
       "modelnummer": "9780655315254",
       "deuren": 4,
       "taal": "Duits",
