@@ -53,10 +53,10 @@ let winkelwagenObj = {
 
   ItemsOphalen: function() {
     let bestelling;
-    if (localStorage.getItem("besteldeBoeken") == null) {
+    if (localStorage.getItem("besteldeAutos") == null) {
       bestelling = [];
     } else {
-      bestelling = JSON.parse(localStorage.getItem("besteldeBoeken"));
+      bestelling = JSON.parse(localStorage.getItem("besteldeAutos"));
       document.getElementById("winkelwagen__aantal").innerHTML =
         bestelling.length;
     }
@@ -74,7 +74,7 @@ let winkelwagenObj = {
         modelnummer = 4;
       }
     });
-    localStorage.setItem("besteldeBoeken", JSON.stringify(this.items));
+    localStorage.setItem("besteldeAutos", JSON.stringify(this.items));
     if (this.items.length > 0) {
       document.getElementById(
         "winkelwagen__aantal"
@@ -87,8 +87,8 @@ let winkelwagenObj = {
 
   totaalPrijsBerekenen: function() {
     let totaal = 0;
-    this.items.forEach(boek => {
-      totaal += boek.prijs;
+    this.items.forEach(auto => {
+      totaal += auto.prijs;
     });
     return totaal;
   },
@@ -108,38 +108,38 @@ let winkelwagenObj = {
   },
 
   uitvoeren: function() {
-    let aantalBoeken = 0;
+    let aantalAutos = 0;
     document.getElementById("besteluitvoer").innerHTML = "";
-    this.items.forEach(boek => {
+    this.items.forEach(auto => {
       let sectie = document.createElement("section");
-      sectie.className = "boekbesteld";
+      sectie.className = "autobesteld";
 
       let merk = document.createElement("h3");
-      merk.className = "boekbesteld__merk";
-      merk.textContent = boek.merk;
+      merk.className = "autobesteld__merk";
+      merk.textContent = auto.merk;
 
       let afbeelding = document.createElement("img");
-      afbeelding.className = "boekbesteld__cover";
-      afbeelding.setAttribute("src", boek.cover);
-      afbeelding.setAttribute("alt", boek.merk);
+      afbeelding.className = "autobesteld__cover";
+      afbeelding.setAttribute("src", auto.cover);
+      afbeelding.setAttribute("alt", auto.merk);
 
       let aantal = document.createElement("input");
-      let aantalBoek = boek.aantal;
-      aantal.className = "boekbesteld__aantal";
+      let aantalAuto = auto.aantal;
+      aantal.className = "autobesteld__aantal";
       aantal.setAttribute("type", "number");
-      aantal.setAttribute("value", aantalBoek);
+      aantal.setAttribute("value", aantalAuto);
 
       let prijs = document.createElement("div");
-      prijs.className = "boekbesteld__prijs";
-      prijs.textContent = boek.prijs.toLocaleString("nl-NL", {
+      prijs.className = "autobesteld__prijs";
+      prijs.textContent = auto.prijs.toLocaleString("nl-NL", {
         currency: "EUR",
         style: "currency"
       });
 
       let verwijder = document.createElement("div");
-      verwijder.className = "boekbesteld__verwijder";
+      verwijder.className = "autobesteld__verwijder";
       verwijder.addEventListener("click", () => {
-        this.verwijderItem(boek.modelnummer);
+        this.verwijderItem(auto.modelnummer);
       });
 
       sectie.appendChild(afbeelding);
@@ -148,16 +148,16 @@ let winkelwagenObj = {
       sectie.appendChild(prijs);
       sectie.appendChild(verwijder);
       document.getElementById("besteluitvoer").appendChild(sectie);
-      aantalBoeken++;
+      aantalAutos++;
     });
 
     if (this.totalenPrijs() > 9.99) {
       let sectieTotaal = document.createElement("section");
-      sectieTotaal.className = "boekbesteld";
+      sectieTotaal.className = "autobesteld";
 
       let totaalTekst = document.createElement("div");
       totaalTekst.className = "totaalTekst";
-      totaalTekst.innerHTML = "Totaal Artikelen(" + aantalBoeken + "): ";
+      totaalTekst.innerHTML = "Totaal Artikelen(" + aantalAutos + "): ";
 
       let totaalPrijs = document.createElement("div");
       totaalPrijs.className = "totaalPrijs";
@@ -167,7 +167,7 @@ let winkelwagenObj = {
       );
 
       let sectieVerzend = document.createElement("section");
-      sectieVerzend.className = "boekbesteld";
+      sectieVerzend.className = "autobesteld";
 
       let verzendTekst = document.createElement("div");
       verzendTekst.className = "totaalTekst";
@@ -192,7 +192,7 @@ let winkelwagenObj = {
         "Bij een bestelling boven de 50 euro hoeft u geen verzendkosten te betalen.";
 
       let sectieTotaal2 = document.createElement("section");
-      sectieTotaal2.className = "boekbesteld";
+      sectieTotaal2.className = "autobesteld";
 
       let totaalTekst2 = document.createElement("div");
       totaalTekst2.className = "totaalTekst";
